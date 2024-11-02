@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    tools:context=".MainActivity" >
+    android:background="@drawable/gym_background"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -17,15 +17,6 @@
         android:src="@drawable/user_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alpha="@dimen/material_emphasis_disabled_background"
-        app:srcCompat="@drawable/gym_background"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -56,19 +47,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="32dp"
         android:text="¿Necesita ayuda?"
         android:textColor="#D1D1D1"
-        android:textSize="16sp"
+        android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="222dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:layout_marginStart="92dp"
         android:layout_marginTop="292dp"
         android:backgroundTint="#FD870D"
@@ -80,8 +71,7 @@
     <Button
         android:id="@+id/button2"
         android:layout_width="222dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="48dp"
         android:backgroundTint="#FD870D"
         android:text="Bloquear taquilla"
         app:layout_constraintEnd_toEndOf="@+id/button3"
@@ -90,27 +80,32 @@
     <Button
         android:id="@+id/button3"
         android:layout_width="222dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#FD870D"
         android:text="Mi actividad reciente"
         app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="222dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#FD870D"
         android:text="Mi cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3"
-        tools:layout_editor_absoluteX="94dp" />
+        app:layout_constraintVertical_bias="0.014" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="182dp"
-        android:layout_height="34dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#FD870D"
