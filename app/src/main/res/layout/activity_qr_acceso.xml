@@ -12,52 +12,62 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
         android:text="Tu QR de acceso:"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="157dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="440dp"
         android:freezesText="true"
         android:text="Generado el: DD/MM/YYYY"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="453dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="508dp"
         android:freezesText="true"
         android:text="¿No funciona?"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="547dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/qr_test_code"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="219dp" />
+        android:layout_marginTop="224dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/qr_test_code" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="552dp"
         android:backgroundTint="#573301"
         android:text="Regenerar QR"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="587dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
