@@ -4,12 +4,20 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main) // Asegúrate de que sea el layout correcto
+
+        // Obtener el nombre de usuario desde el Intent
+        val userNameTextView = findViewById<TextView>(R.id.textView2)
+        val username = intent.getStringExtra("USERNAME_KEY")
+        if (username != null) {
+            userNameTextView.text = username
+        }
 
         // Configuración del botón "Mi cuenta"
         val miCuentaButton = findViewById<Button>(R.id.button4)

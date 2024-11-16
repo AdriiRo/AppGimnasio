@@ -4,18 +4,25 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.widget.Button
+import android.widget.EditText
 
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login) // Cambia a tu layout actual si es diferente
+        setContentView(R.layout.activity_login)
 
-        // Configura el botón "Iniciar sesión" para que navegue a MainActivity
+        val usernameEditText = findViewById<EditText>(R.id.editTextText)
         val iniciarSesionButton = findViewById<Button>(R.id.button6)
+
+        // Configura el botón de Iniciar Sesión para que navegue a MainActivity
         iniciarSesionButton.setOnClickListener {
-            // Crea un Intent para abrir MainActivity
+            // Obtener el nombre del usuario
+            val username = usernameEditText.text.toString()
+
+            // Crea un Intent para abrir MainActivity y pasa el nombre de usuario
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("USERNAME_KEY", username)
             startActivity(intent)
         }
     }
