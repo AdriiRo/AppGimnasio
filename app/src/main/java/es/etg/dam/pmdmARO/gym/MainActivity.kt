@@ -10,26 +10,25 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main) // Asegúrate de que sea el layout correcto
+        setContentView(R.layout.activity_main)
 
-        // Obtener el nombre de usuario desde el Intent
+        // Leer el nombre de usuario desde el Intent
         val userNameTextView = findViewById<TextView>(R.id.textView2)
-        val username = intent.getStringExtra("USERNAME_KEY")
-        if (username != null) {
-            userNameTextView.text = username
-        }
+        val username = intent.getStringExtra("USERNAME_KEY") // Obtenemos el nombre del Intent
 
-        // Configuración del botón "Mi cuenta"
+        // Mostrar el nombre en el TextView
+        userNameTextView.text = username ?: "Usuario no encontrado"
+
+        // Configurar el botón "Mi cuenta"
         val miCuentaButton = findViewById<Button>(R.id.button4)
         miCuentaButton.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
-        // Configuración del botón "Generar QR de acceso"
+        // Configurar el botón "Generar QR de acceso"
         val generarQRButton = findViewById<Button>(R.id.button)
         generarQRButton.setOnClickListener {
-            // Crea un Intent para iniciar QrAccesoActivity
             val intent = Intent(this, QrAccesoActivity::class.java)
             startActivity(intent)
         }
