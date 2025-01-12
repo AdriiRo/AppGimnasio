@@ -13,10 +13,10 @@
         android:theme="@style/Theme.AppGimnasio"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".TaquillasActivity"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".QrAccesoActivity"

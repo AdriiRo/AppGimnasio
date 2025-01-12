@@ -2,15 +2,31 @@ package es.etg.dam.pmdmARO.gym
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.TextView
+import androidx.room.Room
+import es.etg.dam.pmdmARO.gym.data.UsuarioDatabase
+import es.etg.dam.pmdmARO.gym.data.UsuarioEntity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        lateinit var database: UsuarioDatabase
+        const val DATABASE_NAME = "usuario-db"
+        const val APP  ="corrutinas"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        MainActivity.database =  Room.databaseBuilder(this,
+            UsuarioDatabase::class.java,
+            DATABASE_NAME).build()
 
         // Leer el nombre de usuario desde el Intent
         val userNameTextView = findViewById<TextView>(R.id.textView2)
@@ -34,3 +50,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+

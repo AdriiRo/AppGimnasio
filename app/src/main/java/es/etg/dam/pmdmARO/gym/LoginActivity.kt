@@ -13,8 +13,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val usernameEditText = findViewById<EditText>(R.id.editTextText)
-        val iniciarSesionButton = findViewById<Button>(R.id.button6)
+        val usernameEditText = findViewById<EditText>(R.id.tvUsuario)
+        val iniciarSesionButton = findViewById<Button>(R.id.btnIniciarSesion)
+        val registrarButton = findViewById<Button>(R.id.btnRegistrar)
 
         // Instancia de PreferenciasUsuario
         val preferenciasUsuario = PreferenciasUsuario(this)
@@ -37,6 +38,13 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("USERNAME_KEY", username) // Pasamos el nombre
             startActivity(intent)
+        }
+
+        registrarButton.setOnClickListener {
+
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+
         }
     }
 }
