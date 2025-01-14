@@ -9,7 +9,7 @@ import androidx.room.Query
 @Dao
 interface UsuarioDao {
 
-    @Query ("SELECT id,nombre, contrasena, email FROM usuario")
+    @Query ("SELECT id,nombre, contrasena, email FROM usuario") // Usuario: nombre de la tabla
     suspend fun getAll(): List <UsuarioEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

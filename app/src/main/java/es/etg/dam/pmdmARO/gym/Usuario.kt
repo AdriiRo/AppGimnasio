@@ -10,6 +10,6 @@ data class Usuario(
     var email: String
 ) : Parcelable {
     override fun toString(): String {
-        return nombre
+        return nombre+contrasena+email
     }
 }

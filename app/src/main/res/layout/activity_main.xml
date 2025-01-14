@@ -116,4 +116,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/btnPermisos"
+        android:layout_width="147dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="#FD870D"
+        android:text="Aceptar permisos"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
