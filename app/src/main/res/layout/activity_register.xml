@@ -15,6 +15,18 @@
         tools:layout_editor_absoluteX="82dp"
         tools:layout_editor_absoluteY="176dp">
 
+        <Button
+            android:id="@+id/btnIniciarSesion2"
+            android:layout_width="190dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="508dp"
+            android:backgroundTint="#573301"
+            android:text="Regristarme ahora"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <EditText
             android:id="@+id/tvContrasena"
             android:layout_width="wrap_content"
@@ -59,18 +71,6 @@
             app:layout_constraintStart_toStartOf="@+id/tvUsuario"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.777" />
-
-        <Button
-            android:id="@+id/btnIniciarSesion"
-            android:layout_width="190dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="504dp"
-            android:backgroundTint="#573301"
-            android:text="Regristarme ahora"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView7"
